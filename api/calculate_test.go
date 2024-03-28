@@ -25,7 +25,7 @@ func TestCalculateCostEfficiency(t *testing.T) {
 	}
 
 	want := expectedResult
-	got, _ := CalculateCostEfficiency(wallTypes, insulationTypes, desiredUValue)
+	got, _ := calculateCostEfficiency(wallTypes, insulationTypes, desiredUValue)
 
 	if want != got {
 		t.Errorf("Expected: %v, but got: %v", want, got)
@@ -61,7 +61,7 @@ func TestCalculateCostEfficiency_NoOptimalSolution(t *testing.T) {
 		cost:           150,
 		achievedUValue: 0.16666666666666666,
 	}
-	got, _ := CalculateCostEfficiency(wallTypes, insulationTypes, desiredUValue)
+	got, _ := calculateCostEfficiency(wallTypes, insulationTypes, desiredUValue)
 
 	if want != got {
 		t.Errorf("Expected: %v, but got: %v", want, got)

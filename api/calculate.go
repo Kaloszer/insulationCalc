@@ -26,7 +26,7 @@ type Result struct {
 	achievedUValue float64
 }
 
-func CalculateCostEfficiency(wallTypes []wallType, insulationTypes []insulationType, desiredUValue float64) (result Result, err error) {
+func calculateCostEfficiency(wallTypes []wallType, insulationTypes []insulationType, desiredUValue float64) (result Result, err error) {
 	// Initialize variables to track the optimal solution
 	var optimalWallType string
 	var optimalInsulationType string
